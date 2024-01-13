@@ -4,48 +4,62 @@ An MVC Application that provides a fully functioning login-signup authentication
 
 Pre-requisites
 ```
-Binaries	Version
-NodeJS	>= 14.17.6 - LTS
-NPM	8.12..1
-yarn	>=1.22.19
-PostgreSQL	>= 14.3
-ts-node	>= 10.8.1
-Other Binaries and Versions are Included in package.json file.
+Java =>	JDK 17
+Spring Boot => V.3.2.1
+Thymeleaf
+Oracle SQL	
 ```
 
 # Project Structure
 ```
 .
-├── client
-│   ├── public
-│   └── src
-├── Docs
-│   └── imgs
-└── server
-    ├── bin
-    ├── dist
-    │   ├── config
-    │   ├── Controllers
-    │   ├── Errors
-    │   ├── Handlers
-    │   ├── Middleware
-    │   ├── Models
-    │   └── tests
-    │       └── helpers
-    ├── imgs
-    ├── migrations
-    │   └── sqls
-    ├── spec
-    │   └── support
-    └── src
-        ├── config
-        ├── Controllers
-        ├── Errors
-        ├── Handlers
-        ├── Middleware
-        ├── Models
-        └── tests
-            └── helpers
+├── src
+│   ├── main
+        └── java
+           └── com
+               └── luv2code
+                   └── springboot
+                       └── thymeleafdemo
+                                │── aspect
+                                     └── DemoLoggingAspect.java                      
+                                │──controller
+                                       └── DemoController.java
+                                       ├──EmployeeController.java  
+                                ├──dao
+                                       └── EmployeeRepository.java
+                                       ├── MembersRepository.java
+                                       ├── MembersRepositoryImpl.java     
+                                │──entity
+                                       └── Employee.java
+                                       ├── Members.java
+                                       ├── Roles.java    
+                                │──security
+                                       └── DemoSecurityConfig.java
+                                │──service
+                                       └── ThymeleafdemoApplication.java
 
+
+                              
+    ├── resources
+        ├── static
+            └── index.html
+        ├── templates
+            └── employees
+                   └── access-denied.html
+                   ├── fancy-login.html
+                   ├── helloworld.html
+                   ├── plain-login.html    
+                   ├── systems.html
+        ├── application.properties
+
+        ├── test
+
+        ├── target
+        ├── desktop.ini
+        ├── Help.md
+        ├── mnv
+        ├── mnvw.cmd
+        ├── pom.xml
+        ├── Readme.md
 ```
 
