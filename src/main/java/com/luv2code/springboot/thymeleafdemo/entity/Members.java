@@ -93,12 +93,17 @@ public class Members {
 
 
 	//adding convenience method for bi-directional relationship
+	// associates member to roles and roles to member
 	public void add(Roles tempRole) {
+		// if list of roles for that member is empty create new list
 		if (roles == null) {
 			roles = new ArrayList<>();
 		}
 		
+		// add to this roles list for that member the role object
 		roles.add(tempRole);
+		
+		// set the member to this member from that class
 		tempRole.setMember(this);
 		
 	}

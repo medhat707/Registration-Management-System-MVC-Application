@@ -49,7 +49,7 @@ public class EmployeeController {
 		return "employees/list-employees";
 	}
 	
-	//MAIN
+	//MAIN - REGISTRATION FORM
 	@GetMapping("/showForm")
 	public String showTheForm(Model theModel) {
 		
@@ -69,6 +69,7 @@ public class EmployeeController {
 	
 
 
+	//taking the data sent from the registration form and putting it into Model
 	@PostMapping("/save")
 	public String saveEmployee(Model model, @ModelAttribute("employee") Employee employee
 			, @ModelAttribute("member") Members member) {
@@ -85,7 +86,7 @@ public class EmployeeController {
 		//saving member
 		membersService.save(member);
 		
-	
+	//Go the the controller with the name TheSystems
 		//debug
 		System.out.println("print the employee " + employee);
 		//redirect to the home page
@@ -96,16 +97,25 @@ public class EmployeeController {
 
 	}
 	
+	//1. FOR Employee
+	//NOW i wanna get the employee with the selected id particularly
+	//FOR that we take only the id sent after clicking the update button
+	//<a th:href="@{/employees/showFormForUpdate(employeeId=${tempEmployee.id})}"
+	//this method takes the data/id from the link via @RequestParam
+	// then find the employee by it, put it into Model
 	
-
+	//2. FOR Member -> create new member , put it in Model, send it over to view
 	
-	//this method takes the data entered through @RequestParam
 	@GetMapping("/showFormForUpdate")
-	public String showTheNewForm(@RequestParam("employeeId") int id , Model theModel,
-			@ModelAttribute("theMember") Members theMember) {
+	public String showTheNewForm(@RequestParam("employeeId") int id , Model theModel
+	// 
+			) {
 		// find the employee - get from service
 		Employee theEmp = employeeService.findById(id);
 		//put it in the model and sent it over to the form
+		
+		Members theMember = new Members();
+
 		theModel.addAttribute("employee" , theEmp);
 		theModel.addAttribute("theMember" , theMember);
 

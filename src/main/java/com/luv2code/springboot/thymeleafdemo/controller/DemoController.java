@@ -22,6 +22,7 @@ public class DemoController {
 		return "helloworld";
 	}
 	
+	//takes the data sent from the save controller, put it into Model, then view
 	@GetMapping("/TheSystems")
 	public String showSystems(Model theModel, @ModelAttribute("employee") Employee employee
 			, @ModelAttribute("member") Members member) {
