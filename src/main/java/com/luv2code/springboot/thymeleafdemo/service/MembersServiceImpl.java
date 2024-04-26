@@ -62,18 +62,20 @@ public class MembersServiceImpl implements MembersService{
 		
 		
 	}
-//	
+
+	
 	private Collection<? extends GrantedAuthority> mapRolesToAuthorities(List<Roles> roles) {
 		// TODO Auto-generated method stub
 		return roles.stream().map(role -> new SimpleGrantedAuthority(role.getRole())).
 		collect(Collectors.toList());	}
 
-//	
 
+	/*
 	private Collection<? extends GrantedAuthority> mapRolesToAuthorities
 	(Collection<Role> roles){
 		return roles.stream().map(role -> new SimpleGrantedAuthority(role.getRoleName())).
 		collect(Collectors.toList());
 			}
+			*/
 	
 }

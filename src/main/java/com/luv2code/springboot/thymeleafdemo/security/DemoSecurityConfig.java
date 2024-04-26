@@ -52,10 +52,10 @@ public class DemoSecurityConfig {
 	}
 	
 	
-    @Autowired
-	protected void configure(AuthenticationManagerBuilder auth) throws Exception{
-		auth.authenticationProvider(authProvider());
-	}
+ //   @Autowired
+//	protected void configure(AuthenticationManagerBuilder auth) throws Exception{
+//		auth.authenticationProvider(authProvider());
+//	}
 	
 	
 	
