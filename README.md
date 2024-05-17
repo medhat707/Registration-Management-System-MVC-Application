@@ -14,52 +14,32 @@ Oracle SQL
 ```
 .
 ├── src
-│   ├── main
-        └── java
-           └── com
-               └── luv2code
-                   └── springboot
-                       └── thymeleafdemo
-                                │── aspect
-                                     └── DemoLoggingAspect.java                      
-                                │──controller
-                                       └── DemoController.java
-                                       ├──EmployeeController.java  
-                                ├──dao
-                                       └── EmployeeRepository.java
-                                       ├── MembersRepository.java
-                                       ├── MembersRepositoryImpl.java     
-                                │──entity
-                                       └── Employee.java
-                                       ├── Members.java
-                                       ├── Roles.java    
-                                │──security
-                                       └── DemoSecurityConfig.java
-                                │──service
-                                       └── ThymeleafdemoApplication.java
+│   ├──
+     ...
+     ...
+         └── thymeleafdemo
+            │── aspect
+            └── DemoLoggingAspect.java                      
+            │──controller
+            └── DemoController.java
+            ├──EmployeeController.java
+
+          ├──dao
+             └── EmployeeRepository.java
+             ├── MembersRepository.java
+             ├── MembersRepositoryImpl.java     
+
+          │──entity
+             └── Employee.java
+             ├── Members.java
+             ├── Roles.java    
+   
+         │──security
+              └── DemoSecurityConfig.java
+
+         │──service
+              └── ThymeleafdemoApplication.java
 
 
-                              
-    ├── resources
-        ├── static
-            └── index.html
-        ├── templates
-            └── employees
-                   └── access-denied.html
-                   ├── fancy-login.html
-                   ├── helloworld.html
-                   ├── plain-login.html    
-                   ├── systems.html
-        ├── application.properties
-
-        ├── test
-
-        ├── target
-        ├── desktop.ini
-        ├── Help.md
-        ├── mnv
-        ├── mnvw.cmd
-        ├── pom.xml
-        ├── Readme.md
 ```
 
