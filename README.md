@@ -4,11 +4,12 @@ An MVC Application that provides a fully functioning login-signup authentication
 
 Pre-requisites
 ```
-@angular/cli  =>   17.3.8
-Java          =>   JDK 17
-Spring Boot   =>   3.3.0
-MySQL	
+Java =>	JDK 17
+Spring Boot => V.3.2.1
+Thymeleaf
+Oracle SQL	
 ```
+
 
 # Project Structure
 ```
